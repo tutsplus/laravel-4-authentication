@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration {
 			$table->string('lastname', 20);
 			$table->string('email', 100)->unique();
 			$table->string('password', 64);
+			$table->text('remember_token')->nullable(); // For Laravel 4.2, required for "logout"
 			$table->timestamps();
 		});
 	}
